@@ -1,5 +1,4 @@
 """URLs for the ``django-tinylinks`` app."""
-from django.conf.urls.defaults import patterns, url
 from django.views.generic import TemplateView
 
 from tinylinks.views import (
@@ -10,6 +9,11 @@ from tinylinks.views import (
     TinylinkRedirectView,
     TinylinkUpdateView,
 )
+
+try:
+    from django.conf.urls import patterns, url
+except ImportError:  # Django < 1.6 fallback
+    from django.conf.urls.defaults import patterns, url
 
 
 urlpatterns = patterns(
