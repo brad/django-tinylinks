@@ -1,7 +1,7 @@
 Django Tinylinks
 ================
 
-A Django application that adds an URL shortener to your site similar to bit.ly. 
+A Django application that adds an URL shortener to your site similar to bit.ly.
 
 This is an early alpha. Use it with caution.
 
@@ -10,11 +10,12 @@ Installation
 
 You need to install the following prerequisites in order to use this app::
 
-    pip install django==1.4.2
-    pip install South==0.7.6
-    pip install django-libs==0.8
-    pip install urllib3==1.5
+    pip install django
+    pip install South
+    pip install django-libs
+    pip install urllib3
 
+When using Python 2.6, you will also need to install importlib.
 
 If you want to install the latest stable release from PyPi::
 
@@ -101,12 +102,12 @@ If you want to contribute to this project, please perform the following steps::
     # Clone your fork
     $ mkvirtualenv -p python2.7 django-tinylinks
     $ pip install -r requirements.txt
-    $ ./tinylinks/tests/runtests.sh
+    $ ./tinylinks/tests/runtests.py
     # You should get no failing tests
 
     $ git co -b feature_branch master
     # Implement your feature and tests
-    $ ./tinylinks/tests/runtests.sh
+    $ ./tinylinks/tests/runtests.py
     # You should still get no failing tests
     # Describe your change in the CHANGELOG.txt
     $ git add . && git commit
